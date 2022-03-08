@@ -10,8 +10,8 @@ class Raum:
 
 
 def raumflacheBerechnen(raumArt, raum):
-    ersteWandlange = int(input("Geben Sie die Wandlänge der ersten Wand in M an: "))
-    zweiteWandlange = int(input("Geben Sie die Wandlänge der zweiten Wand in M an: "))
+    ersteWandlange = float(input("Geben Sie die Wandlänge der ersten Wand in M an: "))
+    zweiteWandlange = float(input("Geben Sie die Wandlänge der zweiten Wand in M an: "))
     raumTypMultiplikator = 1.0
     if raumArt == "t":
         raumTypMultiplikator = 0.5
@@ -23,7 +23,7 @@ def raumflacheBerechnen(raumArt, raum):
         raeume.append(raum)
         return raumfleache
     raumflache = ersteWandlange * zweiteWandlange * raumTypMultiplikator
-    raum.groesse = raumflache
+    raum.groesse += raumflache
     raeume.append(raum)
     return raumflache
 
@@ -70,5 +70,4 @@ while newRoomAvailable:
             raumFormDefinition("t", raum)
         if raumArt == "d":
             raumFormDefinition("d", raum)
-
-
+            try
