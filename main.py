@@ -71,7 +71,4 @@ while newRoomAvailable:
         if raumArt == "d":
             raumFormDefinition("d", raum)
 
-for room in raeume:
-    print(str(room.name) + " ist " + str(room.groesse) + " m^2 gross")
-
 
